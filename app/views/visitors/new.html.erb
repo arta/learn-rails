@@ -1,4 +1,17 @@
+<% content_for :sidebar do %>
+  <h3>Contact Info</h3>
+  <p>Email: me@example.com</p>
+<% end %>
+
 <h3>Home</h3>
 <p>Welcome to the home of <%= @owner.name %>.</p>
 <p>I was born on <%= @owner.birthdate %>.</p>
 <p>Only <%= @owner.countdown %> days until my birthday!</p>
+
+<%= 2 + 2 %>
+
+<% 3.times do %>
+  <li>list item</li>
+<% end %>
+
+<%# this is a comment %>
