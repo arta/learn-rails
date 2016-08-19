@@ -1,3 +1,8 @@
+========= Send Contact Message ================
+AS the owner of the website
+I WANT TO receive email messages with a visitor's name, email address, and some text
+IN ORDER TO communicate with visitors
+
 ========= Contact Page ================
 AS A visitor to the website
 I WANT TO fill out a form with my name, email address, and some text
