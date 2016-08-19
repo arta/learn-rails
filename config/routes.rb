@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  # the Rails way, web app paradigm:
+  resources :contacts, only: [:new, :create]
+
+  # the old way, page paradigm:
+  post 'contact', to: 'contacts#process_form'
+
   # You can have the root of your site routed with "root"
   root to: 'visitors#new'
   # root to: redirect( '/about.html' )
