@@ -2,7 +2,7 @@
 # remember: mailers are controllers for emails (email views)
 ############################################################
 class UserMailer < ApplicationMailer
-  default from: "do-not-reply@example.com" # use in emails that don't specify from:
+  default from: "do-not-reply@example.com" # use in emails that don't specify `from:`
 
   # mailer actions have their views just like controllers actions have their views
   # contact_email action has contact_email.html.erb view

@@ -36,8 +36,10 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(secure_params)
     if @contact.valid?
-      # this connects to sendgrid and that costs time, which user experiences as a long wait
-      # => employ ActiveJob, queueing system for background jobs 
+      # sending email connects to sendgrid; it costs time experienced by the user as a long wait
+      # => employ ActiveJob (Rails' own queueing system for background jobs)
+      # remember: UserMailer is a controller for emails, it has an action .contact_email
+      # .deliver_now method is inherited by UserMailer from ApplicationMailer
       UserMailer.contact_email( @contact ).deliver_now
       flash[:notice] = "Message sent from #{@contact.name}."
       redirect_to root_path
