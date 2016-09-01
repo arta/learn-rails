@@ -3,7 +3,7 @@ ruby '2.2.4'
 gem 'rails', '4.2.6'
 
 # Ruby defaults
-gem 'sqlite3'
+# gem 'sqlite3' # had to move to :development; Heroku screamed
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -27,6 +27,8 @@ group :development do
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'rails_layout'
+  # Ruby defaults, had to move it here; Heroku screamed
+  gem 'sqlite3'
 end
 group :production do
   gem 'pg'
