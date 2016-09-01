@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   # the Rails way, web app paradigm:
   resources :contacts, only: [:new, :create]
-
   # the old way, page paradigm:
   post 'contact', to: 'contacts#process_form'
+
+  resources :visitors, only: [:new, :create]
 
   # You can have the root of your site routed with "root"
   root to: 'visitors#new'

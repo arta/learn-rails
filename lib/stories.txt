@@ -1,3 +1,8 @@
+========= Subscribe to Mailing List ================
+AS a visitor to the website
+I WANT TO sign up for a mailing list
+IN ORDER TO receive news and announcements
+
 ========= Send Contact Message ================
 AS the owner of the website
 I WANT TO receive email messages with a visitor's name, email address, and some text

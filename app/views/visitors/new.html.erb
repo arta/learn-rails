@@ -1,3 +1,26 @@
+<% content_for :title do %>Foobar Kadigan<% end %>
+<% content_for :description do %>Website of Foobar Kadigan<% end %>
+<section>
+  <img src="http://lorempixel.com/1170/600/cats/1">
+</section>
+<section>
+  <div class="column">
+    <h3>Stay in touch.</h3>
+  </div>
+  <div class="column">
+    <div class="form-centered">
+      <%= simple_form_for @visitor do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
+        <br/>
+        <%= f.button :submit, "Sign up for the newsletter", :class => "submit" %>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<% comment do %>
+<!--
 <% content_for :sidebar do %>
   <h3>Contact Info</h3>
   <p>Email: me@example.com</p>
@@ -13,5 +36,7 @@
 <% 3.times do %>
   <li>list item</li>
 <% end %>
+ -->
+ <% comment end %>
 
 <%# this is a comment %>
